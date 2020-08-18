@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+     <!-- Site Metas -->
+    <title>SmartEDU - Education Responsive HTML5 Template</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="css/versions.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Modernizer for Portfolio -->
+    <script src="js/modernizer.js"></script>
+    <script type="text/javascript" src="js/RU.js"></script>
+    <script type="text/javascript" src="js/OD.js"></script>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="host_version"> 
+
+<!-- Modal -->
+	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header tit-up">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">Entrar</h4>
+			</div>
+			<div class="modal-body customer-box">
+				<!-- Nav tabs -->
+				<ul class="nav nav-tabs">
+					<li><a class="active" href="#Login" data-toggle="tab">Inciar Sesion</a></li>
+					<li><a href="#Registration" data-toggle="tab">Registar como Pasajero</a></li>
+                                        <li><a href="#RegistrationCon" data-toggle="tab">Registar como Conductor</a></li>
+				</ul>
+				<!-- Tab panes -->
+				<div class="tab-content">
+					<div class="tab-pane active" id="Login">
+						<form role="form" class="form-horizontal">
+							<div class="form-group row">
+                                                                <label for="usuarioini" class="col-sm-4 col-form-label">Nombre de usuario</label>
+                                                                <div class="col-sm-6">
+                                                                  <input type="UI" class="form-control" id="IniUsua">
+                                                                </div>
+                                                              </div>
+                                                              <div class="form-group row">
+                                                                <label for="inputPassword3" class="col-sm-4 col-form-label">Contraseña</label>
+                                                                <div class="col-sm-6">
+                                                                  <input type="password" class="form-control" id="IniPass">
+                                                                </div>
+                                                              </div>
+                                                              <fieldset class="form-group">
+                                                                <div class="row">
+                                                                  <legend class="col-form-label col-sm-4 pt-0">Tipo de usuario</legend>
+                                                                  <div class="col-sm-10">
+                                                                    <div class="form-check">
+                                                                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                                                                      <label class="form-check-label" for="gridRadios1">
+                                                                        Conductor
+                                                                      </label>
+                                                                    </div>
+                                                                    <div class="form-check">
+                                                                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                                                                      <label class="form-check-label" for="gridRadios2">
+                                                                        Pasajero
+                                                                      </label>
+                                                                    </div>
+                                                                   </div>
+                                                                </div>
+                                                              </fieldset>
+                                                              <div class="form-group row">
+                                                                <div class="col-sm-10">
+                                                                  <button  class="btn btn-primary "onclick="entrar();">Entrar</button>
+                                                                </div>
+                                                              </div>
+						</form>
+					</div>
+					<div class="tab-pane" id="Registration">
+						<form role="form" class="form-horizontal" onsubmit="return false;">
+						
+                                                    <div  class="form-row">
+                                                    <div class="form-group col-md-4">
+                                                      <label for="inputName">Nombre</label>
+                                                      <input type="name" class="form-control" id="inputname">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                      <label for="inputPA">Apellido</label>
+                                                      <input type="PA" class="form-control" id="inputPA">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                      <label for="inputSA">Segundo apellido</label>
+                                                      <input type="SA" class="form-control" id="inputSA">
+                                                    </div>
+                                                  </div>
+                                                  <div class="form-row">
+                                                    <div class="form-group col-md-5">
+                                                      <label for="inputEmail4">Email</label>
+                                                      <input type="email" class="form-control" id="inputEmail4">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                      <label for="inputNU">Nombre de usuario</label>
+                                                      <input type="NU" class="form-control" id="inputNU">
+                                                    </div>
+                                                    <div class="form-group col-md-3">
+                                                      <label for="inputFN">Cumpleaños</label>
+                                                      <input type="FN" class="form-control" id="inputFN">
+                                                    </div>
+                                                  </div>
+                                                  <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                      <label for="inputPass">Contraseña</label>
+                                                      <input type="password" class="form-control" id="inputPass">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                      <label for="inputtel">Numero telefónico</label>
+                                                      <input type="Tel" class="form-control" id="inputTel">
+                                                    </div>
+                                               </div>
+
+                                                   <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                      <label for="inputlong">longitud</label>
+                                                      <input type="Longitud" class="form-control" id="inputlong">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                      <label for="inputlat">latitud</label>
+                                                      <input type="Latitud" class="form-control" id="inputlat">
+                                                    </div>
+                                               </div>  
+
+                                                 <button type="submit" class="btn btn-primary">Registrar</button>
+                                                 <button type="submit" class="btn btn-primary" onclick="findMe()">Obtener ubicación</button>
+
+                                                </form>
+
+                                                <div id="map"></div>
+
+					</div>
+                                    <div class="tab-pane" id="RegistrationCon">
+						<form role="form" class="form-horizontal" onsubmit="return false;">
+						<div class="form-row">
+                                                    <div class="form-group col-md-4">
+                                                      <label for="inputName">Nombre</label>
+                                                      <input type="name" class="form-control" id="inputname">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                      <label for="inputPA">Apellido</label>
+                                                      <input type="PA" class="form-control" id="inputPA">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                      <label for="inputSA">Segundo apellido</label>
+                                                      <input type="SA" class="form-control" id="inputSA">
+                                                    </div>
+                                                  </div>
+                                                  <div class="form-row">
+                                                    <div class="form-group col-md-5">
+                                                      <label for="inputEmail4">Email</label>
+                                                      <input type="email" class="form-control" id="inputEmail4">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                      <label for="inputNU">Nombre de usuario</label>
+                                                      <input type="NU" class="form-control" id="inputNU">
+                                                    </div>
+                                                    <div class="form-group col-md-3">
+                                                      <label for="inputFN">Cumpleaños</label>
+                                                      <input type="FN" class="form-control" id="inputFN">
+                                                    </div>
+                                                  </div>
+                                                  <div class="form-row">
+                                                    <div class="form-group col-md-4">
+                                                      <label for="inputmovil">Marca del automovil</label>
+                                                      <input type="movil" class="form-control" id="inputmovil">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                      <label for="inputli">Tipo de licencia</label>
+                                                      <input type="li" class="form-control" id="inputli">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                      <label for="inputVEN">Vencimiento</label>
+                                                      <input type="VEN" class="form-control" id="inputVEN">
+                                                    </div>
+                                                  </div>
+                                                  <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                      <label for="inputName">Número de placa</label>
+                                                      <input type="np" class="form-control" id="np">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                      <label for="inputPA">Color del auto</label>
+                                                      <input type="CA" class="form-control" id="inputCA">
+                                                    </div>
+                                                   </div>
+                                                  <button type="submit" class="btn btn-primary">Registrarse</button>
+
+                                                </form>
+
+                                                <div id="map"></div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	  </div>
+	</div>
+
+    <!-- LOADER -->
+	<div id="preloader">
+		<div class="loader-container">
+			<div class="progress-br float shadow">
+				<div class="progress__item"></div>
+			</div>
+		</div>
+	</div>
+	<!-- END LOADER -->	
+	
+	<!-- Start header -->
+	<header class="top-navbar">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="index.html">
+					<img src="images/logo.png" alt="" />
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbars-host">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active"><a class="nav-link" href="index.html">Inicio</a></li>
+						<li class="nav-item"><a class="nav-link" href="about.html">Quienes somos?</a></li>
+						<li class="nav-item"><a class="nav-link" href="contact.html">Comentarios</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+                        <li><a class="hover-btn-new log orange" href="#" data-toggle="modal" data-target="#login"><span>Entrar</span></a></li>
+                    </ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+	<!-- End header -->
+	
+	<div class="all-title-box">
+		<div class="container text-center">
+			<h1>¿Quienes somos?<span class="m_1">Camtransp: tu mejor opción en viajes</span></h1>
+		</div>
+	</div>
+	
+    <div id="overviews" class="section lb">
+        <div class="container">
+            <div class="section-title row text-center">
+                <div class="col-md-8 offset-md-2">
+                    <h3>Sobre nosotros....</h3>
+                    <p class="lead"><p><img src="img/LOGO.PNG" alt="" align="right"/>
+                        Te damos la bienvenida a nuestra pagina Web!<br><br>
+                        
+                        Somos una empresa Tica, brindamos pricipalmete servicios de transporte 
+                        por todo el territorio nacional.<br>
+                        
+                        Adradecemos de antemano por preferirnos!
+                   
+                    </p></p>
+                </div>
+            </div><!-- end title -->
+				
+            </div><!-- end row -->
+        </div><!-- end container -->
+   
+	
+	<div class="hmv-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-6 col-12">
+					<div class="inner-hmv">
+						<div class="icon-box-hmv"><i class="flaticon-achievement"></i></div>
+						<h3>Misión</h3>
+						<div class="tr-pa">M</div>
+						<p>Llevarte desde tu orige hasta tu destino de una manera segura, eficiente y eficaz.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-12">
+					<div class="inner-hmv">
+						<div class="icon-box-hmv"><i class="flaticon-eye"></i></div>
+						<h3>Visión</h3>
+						<div class="tr-pa">V</div>
+						<p>Somos CamTransp y esperamos tu confianza y preferencia para trasnsportarte por todo el territorio nacional.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-12">
+					<div class="inner-hmv">
+						<div class="icon-box-hmv"><i class="flaticon-history"></i></div>
+						<h3>Historia</h3>
+						<div class="tr-pa">H</div>
+						<p>Comenzamos desde un pequeño garaje, con muchas duda, miedo pero mas que todo ganas de hacer la vida mas fácil
+                                                para la humaniad y abrir nuevos puesto de trabjo. En el 2015, se comenzó a realizar todo este sueño y día de hoy
+                                                se está haciendo realidad!</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <div id="testimonials" class="parallax section db parallax-off" style="background-image:url('images/parallax_04.jpg');">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>Comentarios</h3>
+                
+            </div><!-- end title -->
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="testi-carousel owl-carousel owl-theme">
+                        
+                        <div class="testimonial clearfix">
+							<div class="testi-meta">
+                                >
+                                <h4>James Fernando </h4>
+                            </div>
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> Buen tiempo!</h3>
+                                <p class="lead">Condución de la mejor forma y llegué a mi destino con buen tiempo</p>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                        <!-- end testimonial -->
+
+                        <div class="testimonial clearfix">
+							<div class="testi-meta">
+                                
+                                <h4>Jacques Philips </h4>
+                            </div>
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i>Excelente servicio!</h3>
+                                <p class="lead">Ofreció las medias adecuadas ante la situación!</p>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                        <!-- end testimonial -->
+
+                        <div class="testimonial clearfix">
+							<div class="testi-meta">
+                                
+                                <h4>Venanda Mercy </h4>
+                            </div>
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i>Muy amable!</h3>
+                                <p class="lead">Muy respetuoso, conoce de buena música! </p>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div><!-- end testimonial -->
+                    </div><!-- end carousel -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+
+				
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Contactos</h3>
+                        </div>
+
+                        <ul class="footer-links">
+                            <li class="list-group-item">Contactos:</li>
+                            <li class="list-group-item">FB: CamTranspCR</li>
+                            <li class="list-group-item">IG: CamTransp_Oficial</li>
+                            <li class="list-group-item">Tel:(506)2278-8657</li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+				
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </footer><!-- end footer -->
+
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-center">                   
+                    <p class="footer-company-name">All Rights Reserved. &copy; 2020 </a> Design By Fabricio Marín</p>
+                </div>
+            </div>
+        </div><!-- end container -->
+    </div><!-- end copyrights -->
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+	<script src="js/timeline.min.js"></script>
+	<script>
+		timeline(document.querySelectorAll('.timeline'), {
+			forceVerticalMode: 700,
+			mode: 'horizontal',
+			verticalStartPosition: 'left',
+			visibleItems: 4
+		});
+	</script>
+</body>
+</html>

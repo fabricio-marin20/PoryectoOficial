@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+     <!-- Site Metas -->
+    <title>CamTranp</title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- ALL VERSION CSS -->
+    <link rel="stylesheet" href="css/versions.css">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Modernizer for Portfolio -->
+    <script src="js/modernizer.js"></script>
+    <script type="text/javascript" src="js/RU.js"></script>
+    <script type="text/javascript" src="js/OD.js"></script>
+    
+    
+    <script src="lib/jquery/dist/jquery.min.js" type="text/javascript"></script>
+    
+    <script src="lib/sweetAlert2/dist/sweetalert2.all.min.js" type="text/javascript"></script>
+    <link href="lib/sweetAlert2/dist/sweetalert2.min.css" rel="stylesheet" type="text/css"/>
+    
+    <script type="text/javascript" src="js/personasFunctions.js"></script>
+    <script type="text/javascript" src="js/direccionesFunctions.js"></script>
+    <script src="js/InfAutoFunctions.js" type="text/javascript"></script>
+    <script src="js/choferFunctions.js" type="text/javascript"></script>
+    <script src="js/personasFunctions_1.js" type="text/javascript"></script>
+    
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body class="host_version"> 
+
+	<!-- Modal -->
+	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header tit-up">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			<h4 class="modal-title">Entrar</h4>
+                    </div>
+                    <div class="modal-body customer-box">
+				<!-- Nav tabs -->
+                        <ul class="nav nav-tabs">
+                            <li><a class="active" href="#Login" data-toggle="tab">Inciar Sesion</a></li>
+                            <li><a href="#Registration" data-toggle="tab">Registar como Pasajero</a></li>
+                            <li><a href="#RegistrationCon" data-toggle="tab">Registar como Conductor</a></li>
+			</ul>
+				<!-- Tab panes -->
+		<div class="tab-content">
+                    <div class="tab-pane active" id="Login">
+			<form role="form" class="form-horizontal" onsubmit="return false;">
+                            <div class="form-group row">
+                            <label for="usuarioini" class="col-sm-4 col-form-label">Nombre de usuario</label>
+                                <div class="col-sm-6">
+                                    <input type="UI" class="form-control" id="IniUsua">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                            <label for="inputPassword3" class="col-sm-4 col-form-label">Contraseña</label>
+                                <div class="col-sm-6">
+                                    <input type="password" class="form-control" id="IniPass">
+                                </div>
+                            </div>
+                                                              <fieldset class="form-group">
+                                                                <div class="row">
+                                                                  <legend class="col-form-label col-sm-4 pt-0">Tipo de usuario</legend>
+                                                                  <div class="col-sm-10">
+                                                                    <div class="form-check">
+                                                                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked>
+                                                                      <label class="form-check-label" for="gridRadios1">
+                                                                        Conductor
+                                                                      </label>
+                                                                    </div>
+                                                                    <div class="form-check">
+                                                                      <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                                                                      <label class="form-check-label" for="gridRadios2">
+                                                                        Pasajero
+                                                                      </label>
+                                                                    </div>
+                                                                   </div>
+                                                                </div>
+                                                              </fieldset>
+                                                              <div class="form-group row">
+                                                                <div class="col-sm-10">
+                                                                  <button  class="btn btn-primary "onclick="entrar();">Entrar</button>
+                                                                </div>
+                                                              </div>
+						</form>
+					</div>
+					<div class="tab-pane" id="Registration">
+						<form role="form" onsubmit="return false;" id="formPersonas" action="../backend/controller/personasController.php">
+						
+                                                    <div  class="form-row">
+                                                    <div class="form-group col-md-4">
+                                                      <label for="txtnombre">Nombre</label>
+                                                      <input type="text" class="form-control" id="txtnombre">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                      <label for="txtapellido1">Apellido</label>
+                                                      <input type="text" class="form-control" id="txtapellido1">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                      <label for="txtapellido2">Segundo apellido</label>
+                                                      <input type="text" class="form-control" id="txtapellido2">
+                                                    </div>
+                                                  </div>
+                                                  <div class="form-row">
+                                                    <div class="form-group col-md-4">
+                                                      <label for="txtCorreo">Email</label>
+                                                      <input type="email" class="form-control" id="txtCorreo">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                      <label for="txtUsu">Nombre de usuario</label>
+                                                      <input type="text" class="form-control" id="txtUsu">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                      <label for="txtfecNacimiento">Cumpleaños</label>
+                                                      <input type="text" class="form-control" id="txtfecNacimiento">
+                                                    </div>
+                                                  </div>
+                                                    
+                                                  <div class="form-row">
+                                                    <div class="form-group col-md-4">
+                                                      <label for="txtContrasena">Contraseña</label>
+                                                      <input type="password" class="form-control" id="txtContrasena">
+                                                    </div>
+                                                      <div class="form-group col-md-4">
+                                                      <label for="txtPK_cedula">Cédula</label>
+                                                      <input type="text" class="form-control" id="txtPK_cedula">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                      <label for="txttel">Numero telefónico</label>
+                                                      <input type="text" class="form-control" id="txttel">
+                                                    </div>
+                                               </div>
+
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                      <label for="inputlong">longitud</label>
+                                                      <input type="text" class="form-control" id="inputlong">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                      <label for="inputlat">latitud</label>
+                                                      <input type="text" class="form-control" id="inputlat">
+                                                    </div>
+                                               </div>  
+                                                 <div align="center" class="form-group">
+                                                    <input type="hidden" id="typeAction" value="add_personas" />
+                                                    <input type="hidden" id="typeActio" value="add_direcciones" />
+                                                    <button type="submit" class="btn btn-primary" id="enviar">Guardar</button>
+                                                    <button type="reset" class="btn btn-danger" id="cancelar">Cancelar</button>
+                                                    <button type="submit" class="btn btn-primary" onclick="findMe()">Obtener ubicación</button>
+                                                </div>
+                                                 
+                                             
+
+                                                </form>
+
+                                                <div id="map"></div>
+
+					</div>
+                                    <div class="tab-pane" id="RegistrationCon">
+						<form role="form" class="form-horizontal" onsubmit="return false;">
+						<div class="form-row">
+                                                    <div class="form-group col-md-4">
+                                                      <label for="inputName">Nombre</label>
+                                                      <input type="name" class="form-control" id="nombre">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                      <label for="inputPA">Apellido</label>
+                                                      <input type="PA" class="form-control" id="apellido1">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                      <label for="inputSA">Segundo apellido</label>
+                                                      <input type="SA" class="form-control" id="apellido2">
+                                                    </div>
+                                                  </div>
+                                                  <div class="form-row">
+                                                    <div class="form-group col-md-4">
+                                                      <label for="inputlong">Contraseña</label>
+                                                      <input type="pass" class="form-control" id="Contrasena">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                      <label for="inputlat">Cedula</label>
+                                                      <input type="text" class="form-control" id="PK_cedula">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                      <label for="inputlat">Telefono</label>
+                                                      <input type="text" class="form-control" id="tel">
+                                                    </div>
+                                               </div>  
+                                                  <div class="form-row">
+                                                    <div class="form-group col-md-4">
+                                                      <label for="inputEmail4">Email</label>
+                                                      <input type="email" class="form-control" id="Correo">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                      <label for="inputNU">Nombre de usuario</label>
+                                                      <input type="NU" class="form-control" id="Usu">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                      <label for="inputFN">Cumpleaños</label>
+                                                      <input type="FN" class="form-control" id="fecNacimiento">
+                                                    </div>
+                                                  </div>
+                                                  <div class="form-row">
+                                                    <div class="form-group col-md-4">
+                                                      <label for="inputmovil">Marca del automovil</label>
+                                                      <input type="movil" class="form-control" id="inputmovil">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                      <label for="inputli">Tipo de licencia</label>
+                                                      <input type="li" class="form-control" id="inputli">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                      <label for="inputVEN">Vencimiento</label>
+                                                      <input type="VEN" class="form-control" id="inputVEN">
+                                                    </div>
+                                                  </div>
+                                                  <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                      <label for="inputName">Número de placa</label>
+                                                      <input type="np" class="form-control" id="np">
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                      <label for="inputPA">Color del auto</label>
+                                                      <input type="CA" class="form-control" id="inputCA">
+                                                    </div>
+                                                   </div>
+                                                  
+                                                <div align="center" class="form-group">
+                                                    <input type="hidden" id="type" value="add_personas" />
+                                                    <input type="hidden" id="typeAct" value="add_InfAuto" />
+                                                    <input type="hidden" id="typeActi" value="add_chofer" />
+                                                    
+                                                    <button type="submit" class="btn btn-primary" id="Registrarse">Registrarse</button>
+                                                    <button type="reset" class="btn btn-danger" id="cancela">Cancelar</button>
+                                                    
+                                                </div>
+                                                </form>
+
+                                                <div id="map"></div>
+
+					</div>
+		</div>
+			</div>
+		</div>
+	  </div>
+	</div>
+
+    <!-- LOADER -->
+	<div id="preloader">
+		<div class="loader-container">
+			<div class="progress-br float shadow">
+				<div class="progress__item"></div>
+			</div>
+		</div>
+	</div>
+	<!-- END LOADER -->	
+	
+	<!-- Start header -->
+	<header class="top-navbar">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="course-grid-2.html">
+					<img src="images/logo.PNG" alt="" />
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-host" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbars-host">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active"><a class="nav-link" href="index.html">Inicio</a></li>
+						<li class="nav-item"><a class="nav-link" href="about.html">Quienes somos?</a></li>
+						<li class="nav-item"><a class="nav-link" href="contact.html">Comentarios</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+                        <li><a class="hover-btn-new log orange" href="#" data-toggle="modal" data-target="#login"><span>Entrar</span></a></li>
+                    </ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<!-- End header -->
+	
+	<div id="carouselExampleControls" class="carousel slide bs-slider box-slider" data-ride="carousel" data-pause="hover" data-interval="false" >
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
+			<li data-target="#carouselExampleControls" data-slide-to="1"></li>
+			<li data-target="#carouselExampleControls" data-slide-to="2"></li>
+		</ol>
+		<div class="carousel-inner" role="listbox">
+			<div class="carousel-item active">
+				<div id="home" class="first-section" style="background-image:url('https://www.eldinamo.cl/wp-content/uploads/2017/04/UberIM4-1171x523.jpg');">
+					<div class="dtab">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 text-right">
+									<div class="big-tagline">
+										<h2><strong>CamTransp</strong> Viaje seguro!</h2>
+										<p class="lead">Tomando todas la medidas necesaria antes la situacion actual del mundo. CamTransp se asegura un viaje en las mejores condiciones! </p>
+											
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											<a href="about.html" class="hover-btn-new"><span>Leer más</span></a>
+									</div>
+								</div>
+							</div><!-- end row -->            
+						</div><!-- end container -->
+					</div>
+				</div><!-- end section -->
+			</div>
+			<div class="carousel-item">
+				<div id="home" class="first-section" style="background-image:url('https://www.elmetropolitanodigital.com/wp-content/uploads/2018/08/uber-limita-horas-choferes.png');">
+					<div class="dtab">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 text-left">
+									<div class="big-tagline">
+										<h2 data-animation="animated zoomInRight">CamTransp <strong> Confianza de nuestros usuarios </strong></h2>
+										<p class="lead" data-animation="animated fadeInLeft"> Podrás conocer los datos de nuestros conductores, cuando solicites un servicio!</p>
+											
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											<a href="about.html" class="hover-btn-new"><span>Leer más</span></a>
+									</div>
+								</div>
+							</div><!-- end row -->            
+						</div><!-- end container -->
+					</div>
+				</div><!-- end section -->
+			</div>
+			<div class="carousel-item">
+				<div id="home" class="first-section" style="background-image:url('https://www.lavanguardia.com/r/GODO/LV/p7/WebSite/2020/03/26/Recortada/img_smoreno_20200326-154319_imagenes_lv_terceros_istock-1057958406-kfk--656x437@LaVanguardia-Web.jpg');">
+					<div class="dtab">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-12 col-sm-12 text-center">
+									<div class="big-tagline">
+										<h2 data-animation="animated zoomInRight"><strong>CamTransp</strong> Ambiente agradable</h2>
+										<p class="lead" data-animation="animated fadeInLeft"> Nos esforzamos para que cada uno de nuestrsos conductores sean personas con los valores adecuados para que de esta forma el ambiente a la hora del viaje sea el adecuado</p>
+											
+											&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+											<a href="about.html" class="hover-btn-new"><span>Leer más</span></a>
+									</div>
+								</div>
+							</div><!-- end row -->            
+						</div><!-- end container -->
+					</div>
+				</div><!-- end section -->
+			</div>
+			<!-- Left Control -->
+			<a class="new-effect carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+				<span class="fa fa-angle-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+
+			<!-- Right Control -->
+			<a class="new-effect carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+				<span class="fa fa-angle-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</div>
+	
+
+    <div id="testimonials" class="parallax section db parallax-off" style="background-image:url('images/parallax_04.jpg');">
+        <div class="container">
+            <div class="section-title text-center">
+                <h3>Comentarios</h3>
+                
+            </div><!-- end title -->
+
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="testi-carousel owl-carousel owl-theme">
+                        
+                        <div class="testimonial clearfix">
+							<div class="testi-meta">
+                                >
+                                <h4>James Fernando </h4>
+                            </div>
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i> Buen tiempo!</h3>
+                                <p class="lead">Condución de la mejor forma y llegué a mi destino con buen tiempo</p>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                        <!-- end testimonial -->
+
+                        <div class="testimonial clearfix">
+							<div class="testi-meta">
+                                
+                                <h4>Jacques Philips </h4>
+                            </div>
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i>Excelente servicio!</h3>
+                                <p class="lead">Ofreció las medias adecuadas ante la situación!</p>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div>
+                        <!-- end testimonial -->
+
+                        <div class="testimonial clearfix">
+							<div class="testi-meta">
+                                
+                                <h4>Venanda Mercy </h4>
+                            </div>
+                            <div class="desc">
+                                <h3><i class="fa fa-quote-left"></i>Muy amable!</h3>
+                                <p class="lead">Muy respetuoso, conoce de buena música! </p>
+                            </div>
+                            <!-- end testi-meta -->
+                        </div><!-- end testimonial -->
+                    </div><!-- end carousel -->
+                </div><!-- end col -->
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+
+				
+                <div class="col-lg-4 col-md-4 col-xs-12">
+                    <div class="widget clearfix">
+                        <div class="widget-title">
+                            <h3>Contactos</h3>
+                        </div>
+
+                        <ul class="footer-links">
+                            <li class="list-group-item">Contactos:</li>
+                            <li class="list-group-item">FB: CamTranspCR</li>
+                            <li class="list-group-item">IG: CamTransp_Oficial</li>
+                            <li class="list-group-item">Tel:(506)2278-8657</li>
+                        </ul><!-- end links -->
+                    </div><!-- end clearfix -->
+                </div><!-- end col -->
+				
+            </div><!-- end row -->
+        </div><!-- end container -->
+    </footer><!-- end footer -->
+
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-center">                   
+                    <p class="footer-company-name">All Rights Reserved. &copy; 2020 </a> Design By Fabricio Marín</p>
+                </div>
+            </div>
+        </div><!-- end container -->
+    </div><!-- end copyrights -->
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="js/all.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="js/custom.js"></script>
+	<script src="js/timeline.min.js"></script>
+	<script>
+		timeline(document.querySelectorAll('.timeline'), {
+			forceVerticalMode: 700,
+			mode: 'horizontal',
+			verticalStartPosition: 'left',
+			visibleItems: 4
+		});
+	</script>
+</body>
+</html>
